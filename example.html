@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="jspagerfile.js"></script>
+        <title>JsPagerFile</title>
+    </head>
+<body>
+<div id="container"></div>
+<script>
+var jspager = new JsPagerFile(
+    "JsPagerFile",
+    [
+        'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'
+    ],
+    [
+        'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+        'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'   
+    ]
+);
+//set contents
+jspager.setBody('<div class="col-md-12">');
+jspager.setBody('<h1>JsPagerFile</h1>');
+jspager.setBody("<p>It's cool</p>");
+jspager.setBody("<button id='btn'>Click Me</button>");
+jspager.setBody("</div>")
+//set style
+jspager.setStyle(`
+p{
+    color: blue;
+}
+`);
+//set script
+jspager.setJS(`
+console.log("welcome");
+const b = document.querySelector("#btn");
+b.addEventListener("click", function(){
+   alert("Button clicked");
+});
+`);
+//apply
+jspager.docChange("#container");
+</script>
+</body>
+</html>
