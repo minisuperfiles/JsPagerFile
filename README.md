@@ -1,2 +1,2 @@
 # JsPagerFile
-JsPagerFile helps create a dynamic page with javaScript
+JsPagerFile helps create a dynamic page with JavaScript
